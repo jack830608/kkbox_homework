@@ -5,7 +5,8 @@ import App, { Container } from "next/app";
 import withRedux from "next-redux-wrapper";
 
 const initState = {
-    list: []
+    list: [],
+    showModal: false,
 };
 
 const reducer = (state, action) => {
@@ -14,6 +15,11 @@ const reducer = (state, action) => {
             return {
                 ...state,
                 list: action.payload
+            }
+        case 'SET_SHOW_MODAL':
+            return {
+                ...state,
+                showModal: action.payload
             }
         default:
             return state

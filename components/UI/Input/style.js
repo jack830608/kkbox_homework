@@ -9,7 +9,7 @@ export const InputBorder = styled.div`
 export const Input = styled.input`
     border:none;
     background:#FFF;
-    padding:1em 0.7em;
+    padding:0.7em;
     font-size: 16px !important;
     transition:175ms ease-out;
     box-sizing:border-box;
@@ -24,8 +24,5 @@ export const Input = styled.input`
     ::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
-    }
-    @media only screen and (min-width:768px) {
-        padding:0.7em;
     }
 `

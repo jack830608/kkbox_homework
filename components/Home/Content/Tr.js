@@ -1,19 +1,30 @@
 import React from 'react';
-import { Td } from './style';
+import { Column, Id, Name, Email, Delete } from './style';
+import { useDispatch, useSelector } from 'react-redux';
 
 export default (props) => {
+    const dispatch = useDispatch();
+    const list = [...useSelector((state) => state.list)]
+    const handleDel = () => {
+        const payload = list.filter((i) => {
+            return i.id !== props.id;
+        })
+        dispatch({ type: 'SET_LIST', payload })
+    }
     return (
-        <tr
-            key={props.id}
-        >
-            <Td width='15%'>{props.id}</Td>
-            <Td width='25%'>{props.name}</Td>
-            <Td width='40%'>{props.email}</Td>
-            <Td style={{ textAlign: 'right' }}>
-                <div style={{ color: '#EA5359', cursor: 'pointer' }}>
-                    Delete
-                </div>
-            </Td>
-        </tr>
+        <Column key={props.id} >
+            <Id>
+                {props.id}
+            </Id>
+            <Name>
+                {props.name}
+            </Name>
+            <Email>
+                {props.email}
+            </Email>
+            <Delete onClick={handleDel}>
+                Delete
+            </Delete>
+        </Column>
     )
 }
