@@ -55,6 +55,11 @@ export const Th = styled.th`
     border-bottom:1px solid #efefef;
     text-align: left;
 `
+export const ThBox = styled.div`
+    display:flex;
+    align-items:center;
+    cursor:pointer;
+`
 export const Td = styled.td`
     font-size: 12px;
     color: rgba(0, 0, 0, 0.5);
@@ -64,4 +69,11 @@ export const Td = styled.td`
     width:${props => props.width ? props.width : ''};
     text-overflow:ellipsis;
     overflow:hidden;
+`
+export const ArrowBox = styled.div`
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    margin-right:10px;
 `
