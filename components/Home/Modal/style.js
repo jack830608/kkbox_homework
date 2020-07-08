@@ -48,6 +48,9 @@ export const Btn = styled.div`
     :hover{
         background:#03AED8;
     }
+    @media screen and (max-width: 768px) {
+        background:#03AED8;
+    }
 `
 export const Box = styled.div`
     display:flex;
