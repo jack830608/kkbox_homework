@@ -5,17 +5,15 @@ import App, { Container } from "next/app";
 import withRedux from "next-redux-wrapper";
 
 const initState = {
-    test: () => {
-        console.log('test')
-    },
+    list: []
 };
 
 const reducer = (state, action) => {
     switch (action.type) {
-        case 'TEST':
+        case 'SET_LIST':
             return {
                 ...state,
-                name: action.payload
+                list: action.payload
             }
         default:
             return state
