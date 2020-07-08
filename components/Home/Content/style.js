@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    width:75%;
+    width:78%;
     padding:50px 10px;
     box-sizing:border-box;
     @media screen and (max-width: 768px) {
