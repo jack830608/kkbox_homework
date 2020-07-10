@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Content, Title, Alert, Btn, Box } from './style';
+import { Container, Content, Title, Alert, Btn, Box, BtnBox } from './style';
 import { useDispatch, useSelector } from 'react-redux';
 import Input from '../../UI/Input'
 
@@ -47,7 +47,10 @@ export default (props) => {
                     placeholder={'Email'}
                     style={{ margin: '10px 0' }}
                 />
-                <Btn onClick={handleCreate}>Create</Btn>
+                <BtnBox>
+                    <Btn onClick={hideModal} style={{ background: '#EA5359' }}>Cancel</Btn>
+                    <Btn onClick={handleCreate}>Create</Btn>
+                </BtnBox>
             </Content>
         </Container>
     )

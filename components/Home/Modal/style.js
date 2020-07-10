@@ -37,23 +37,25 @@ export const Alert = styled.div`
     text-align:right;
 `
 export const Btn = styled.div`
+    display:inline-block;
     cursor:pointer;
     background:rgba(0,0,0,0.1);
     color:#FFF;
     padding:10px 20px;
     font-size:16px;
     width: fit-content;
-    margin-left: auto;
+    margin-left: 10px;
     transition:0.1s linear;
-    :hover{
-        background:#03AED8;
-    }
-    @media screen and (max-width: 768px) {
-        background:#03AED8;
-    }
+    background:#03AED8;
 `
 export const Box = styled.div`
     display:flex;
     justify-content:space-between;
     align-items:flex-end;
+`
+export const BtnBox = styled.div`
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    margin-top: 20px;
 `
