@@ -12,7 +12,7 @@ export default (props) => {
         dispatch({ type: 'SET_LIST', payload })
     }
     return (
-        <Column key={props.id} >
+        <Column>
             <Id>
                 {props.id}
             </Id>

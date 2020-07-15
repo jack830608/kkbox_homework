@@ -22,7 +22,7 @@ export default (props) => {
         } else if (!validateEmail(email)) {
             setAlert('*請確認Email格式')
         } else {
-            const biggestId = list.sort(function (a, b) { return a.id - b.id; })[list.length - 1].id
+            const biggestId = list.length > 0 ? list.sort(function (a, b) { return a.id - b.id; })[list.length - 1].id : 0
             list.push({ id: biggestId + 1, name, email })
             dispatch({ type: 'SET_LIST', payload: list })
             hideModal()

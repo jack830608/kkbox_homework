@@ -120,6 +120,7 @@ export default (props) => {
         setMember(list.map((i) => {
             return (
                 <Tr
+                    key={i.id}
                     id={i.id}
                     name={i.name}
                     email={i.email}
